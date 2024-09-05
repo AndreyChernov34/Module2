@@ -26,13 +26,15 @@ public class Runner {
         //Получили первое животное (птица) - вызвали у него полет
         //Запрещено пользоваться instanceOf.
 
-        Zoo<Bird, Dog, Tiger> zoo = new Zoo<>(new Bird(), new Dog(), new Tiger());
-        Bird bird = zoo.getAnimalFirst();
-        bird.fly();
+        Zoo<Tiger, Dog, Bird> zoo = new Zoo<>(new Tiger(), new Dog(), new Bird());
+
+        Tiger tiger = zoo.getAnimalFirst();
+        tiger.growl();
         Dog dog = zoo.getAnimalSecond();
         dog.bark();
-        Tiger tiger = zoo.getAnimalThird();
-        tiger.growl();
+        Bird bird = zoo.getAnimalThird();
+        bird.fly();
+
 
         //Задание №2 Гидрометцентр
         //Создать две структуры данных, в которых будет статистика по дням (среднесуточная температура воздуха)
@@ -48,9 +50,10 @@ public class Runner {
         List<Integer> sumDays = new ArrayList<>(january);
         sumDays.addAll(february);
         int sumTemperature = 0;
-        for (int i = 0; i < sumDays.size(); i++) {
-            sumTemperature += sumDays.get(i);
+        for (int temperature : sumDays) {
+            sumTemperature += temperature;
         }
+
         System.out.println("Среднесуточная температура = " + (sumTemperature / sumDays.size()));
 
         //Задание №3 Ресторанный гуру
@@ -68,7 +71,7 @@ public class Runner {
 
         ArrayList<String> result = new ArrayList<>(alldays.get(0));
 
-        for (ArrayList<String> day : alldays.subList(0, alldays.size())) {
+        for (ArrayList<String> day : alldays.subList(1, alldays.size())) {
             result.retainAll(day);
         }
         System.out.println("За пять дней каждый день посещалось: " + result);
