@@ -1,6 +1,6 @@
 package homework2.ex2;
 
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 //2. Задание: Таможня в Болгарии
@@ -26,7 +26,7 @@ public class Runner {
     private static final int MINIMUM_FIELDS_COUNT = 2;
     private static final int WEITH_INDEX = 1;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         String filename = "luggage.csv";
         try (Scanner scanner = new Scanner(homework2.ex1.Runner.class.getClassLoader().getResourceAsStream(filename))) {
             // получаем результат HashMap
@@ -57,6 +57,7 @@ public class Runner {
                 }
             }
         }
+        scanner.close();
         return allweith;
     }
 }

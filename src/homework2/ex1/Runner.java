@@ -1,6 +1,6 @@
 package homework2.ex1;
 
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Runner {
@@ -10,7 +10,7 @@ public class Runner {
     private static final int MAXIMUM_TAPE_LENGTH = 10;
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         //1. Задание: Грузчики в Болгарии
         //В аэропорт Болгарии прилетает самолет. В самолете багаж.
         //На выгрузной ленте может находиться не больше 10 чемоданов.
