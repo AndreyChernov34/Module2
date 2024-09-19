@@ -1,7 +1,5 @@
 package homework3.ex3;
 
-import java.util.function.Consumer;
-
 public class Runner {
     public static void main(String[] args) {
         //Задание №3: Гори ясно!

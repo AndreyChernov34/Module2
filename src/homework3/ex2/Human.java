@@ -9,7 +9,7 @@ public class Human {
     Integer heith;
 
     public Human(Integer age, Integer heith) {
-        age = age;
-        heith = heith;
+        this.age = age;
+        this.heith = heith;
     }
 }
