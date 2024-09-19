@@ -18,9 +18,9 @@ import java.util.Scanner;
 
 public class Runner {
     private static final String DELIMITER = ";";
-    private static final String LIGHT_BAGGAGECATEGORY = "легкие";
-    private static final String AVERAGE_BAGGAGECATEGORY = "средние";
-    private static final String HEAVY_BAGGAGECATEGORY = "тяжелые";
+    private static final String LIGHT_BAGGAGE_CATEGORY = "легкие";
+    private static final String AVERAGE_BAGGAGE_CATEGORY = "средние";
+    private static final String HEAVY_BAGGAGE_CATEGORY = "тяжелые";
     private static final int LIGHT_BAGGAGELIMIT = 5;
     private static final int AVERAGE_BAGGAGEWEITH = 10;
     private static final int MINIMUM_FIELDS_COUNT = 2;
@@ -33,6 +33,7 @@ public class Runner {
             HashMap<String, Integer> resultBagagge = readFile(scanner);
             // необязательно, но выводим на печать
             System.out.println(resultBagagge);
+            resultBagagge.entrySet();
         }
 
     }
@@ -46,13 +47,13 @@ public class Runner {
             String[] fields = line.split(DELIMITER);
             if (fields.length == MINIMUM_FIELDS_COUNT) {
                 if (Integer.valueOf(fields[WEITH_INDEX]) >= AVERAGE_BAGGAGEWEITH) {
-                    allweith.put(HEAVY_BAGGAGECATEGORY, allweith.getOrDefault(HEAVY_BAGGAGECATEGORY, 0)
+                    allweith.put(HEAVY_BAGGAGE_CATEGORY, allweith.getOrDefault(HEAVY_BAGGAGE_CATEGORY, 0)
                             + Integer.valueOf(fields[WEITH_INDEX]));
                 } else if (Integer.valueOf(fields[WEITH_INDEX]) >= LIGHT_BAGGAGELIMIT) {
-                    allweith.put(AVERAGE_BAGGAGECATEGORY, allweith.getOrDefault(AVERAGE_BAGGAGECATEGORY, 0)
+                    allweith.put(AVERAGE_BAGGAGE_CATEGORY, allweith.getOrDefault(AVERAGE_BAGGAGE_CATEGORY, 0)
                             + Integer.valueOf(fields[WEITH_INDEX]));
                 } else {
-                    allweith.put(LIGHT_BAGGAGECATEGORY, allweith.getOrDefault(LIGHT_BAGGAGECATEGORY, 0)
+                    allweith.put(LIGHT_BAGGAGE_CATEGORY, allweith.getOrDefault(LIGHT_BAGGAGE_CATEGORY, 0)
                             + Integer.valueOf(fields[WEITH_INDEX]));
                 }
             }
