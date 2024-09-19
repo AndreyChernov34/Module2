@@ -9,8 +9,8 @@ public class Runner {
         //Метод ничего не принимает.
         //Создать с помощью лямбд выражений 2 фермы: яблочная, абрикосовая.
         //Яблочная ферма должна отдавать яблоко(не фрукт!), абрикосовая - абрикос(не фрукт!).
-        Garden appleFarm = () -> new Apple();
-        Garden apricotFarm = () -> new Apricot();
+        Garden appleFarm = Apple::new;
+        Garden apricotFarm = Apricot::new;
         Fruits apple = appleFarm.grow();
         Fruits apricot = apricotFarm.grow();
         // Проверка
