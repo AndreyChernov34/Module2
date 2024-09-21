@@ -5,12 +5,11 @@ import java.time.LocalDateTime;
 /*
 класс отзывы
  */
-
 public class Review {
-    Integer id;
-    String text;
-    Integer like;
-    LocalDateTime dateTime;
+    public Integer id;
+    public String text;
+    public Integer like;
+    public LocalDateTime dateTime;
 
     public Review(Integer number, String text, Integer like, LocalDateTime dateTime) {
         this.id = number;
