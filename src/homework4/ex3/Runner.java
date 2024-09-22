@@ -32,7 +32,7 @@ public class Runner {
         Skyscraper skyscraper3 = new Skyscraper("Бурдж-Халифа", 828);
         Skyscraper skyscraper4 = new Skyscraper("Международный финансовый центр Пинань", 599);
         Skyscraper skyscraper5 = new Skyscraper("Абрадж аль-Бейт", 601);
-        Skyscraper skyscraper6 = new Skyscraper("Всемирный центр Лотте", 1555);
+        Skyscraper skyscraper6 = new Skyscraper("Всемирный центр Лотте", 555);
 
         // помещаем небоскребы в лист
         List<Skyscraper> listSkyscreaper = new ArrayList<>(
@@ -53,13 +53,13 @@ public class Runner {
                 filter(e -> e.getHeigth() > 1000).
                 map(e -> e.getName()).
                 reduce((a, b) -> "%s, %s".formatted(a, b));
-        System.out.println("Небоскребы выше 1км: " + upKilometr.orElse("таких небоскребов нет"));
+        System.out.println("Небоскребы выше 1км: " + upKilometr.orElse("небоскреба выше километра - нет"));
 
         // выбираем выше километра с выводом Skyscreaoer
         System.out.print("Небоскребы выше 1км: ");
         List<Skyscraper> upKilometr2 = resultlist.stream().filter(e -> e.getHeigth() > 1000).toList();
         if (upKilometr2.isEmpty()) {
-            System.out.println("таких небоскребов нет");
+            System.out.println("небоскреба выше километра - нет");
         } else {
             upKilometr2.forEach(e -> System.out.println(e));
         }

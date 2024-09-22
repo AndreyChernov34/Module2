@@ -12,12 +12,4 @@ public class Human {
         this.age = age;
         this.heith = heith;
     }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public Integer getHeith() {
-        return heith;
-    }
 }

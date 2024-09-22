@@ -31,8 +31,8 @@ public class Runner {
         }
         List<Car> allcars = Stream.of(listNumbers1, listNumbers2).flatMap(e -> e.stream()).toList();
 
-        allcars.stream().filter(e -> e.number.substring(1, 3).equals("04"))
-                .map(e -> e.number)
+        allcars.stream().filter(e -> e.getNumber().substring(1, 3).equals("04"))
+                .map(e -> e.getNumber())
                 .forEach(e -> System.out.println(e));
     }
 }

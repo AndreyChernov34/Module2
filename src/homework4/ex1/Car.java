@@ -4,7 +4,7 @@ package homework4.ex1;
 Класс машина
  */
 public class Car {
-    public String number;
+    private String number;
 
     public Car(String number) {
         this.number = number;

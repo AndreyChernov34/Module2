@@ -1,8 +1,9 @@
 package homework4.ex2;
+
 import java.util.*;
 
 public class Runner {
-    private static Character character = 'о';
+    private static final Character CHARACTER = 'о';
 
     public static void main(String[] args) {
         //Задание №2 - Сколько здесь "о" ?
@@ -25,7 +26,7 @@ public class Runner {
     public static Integer countchar(String word) {
         int count = 0;
         for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == character) {
+            if (word.charAt(i) == CHARACTER) {
                 count = count + 1;
             }
         }
