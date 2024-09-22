@@ -1,4 +1,10 @@
-package org.javaacademy.homework.homework4.ex1;
+package homework4.ex1;
+
+import homework4.ex1.Car;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class Runner {
     public static void main(String[] args) {
@@ -19,5 +25,16 @@ public class Runner {
         // ...
         // k048се178
         // k049се178
+        List<Car> listNumbers1 = new ArrayList<>();
+        List<Car> listNumbers2 = new ArrayList<>();
+        for (int i = 1; i < 51; i++) {
+            listNumbers1.add(new Car("a" + String.format("%03d", i) + "ан799"));
+            listNumbers2.add(new Car("к" + String.format("%03d", i) + "се178"));
+        }
+        List<Car> allcars = Stream.of(listNumbers1, listNumbers2).flatMap(e -> e.stream()).toList();
+
+        allcars.stream().filter(e -> e.number.substring(1, 3).equals("04"))
+                .map(e -> e.number)
+                .forEach(e -> System.out.println(e));
     }
 }
