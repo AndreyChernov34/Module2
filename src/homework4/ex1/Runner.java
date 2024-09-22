@@ -1,7 +1,5 @@
 package homework4.ex1;
 
-import homework4.ex1.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;

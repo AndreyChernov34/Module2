@@ -1,6 +1,4 @@
-package org.javaacademy.homework.homework4.ex3;
-
-import homework4.ex3.Skyscraper;
+package homework4.ex3;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -63,7 +61,7 @@ public class Runner {
         if (upKilometr2.isEmpty()) {
             System.out.println("таких небоскребов нет");
         } else {
-            upKilometr2.stream().forEach(e -> System.out.println(e));
+            upKilometr2.forEach(e -> System.out.println(e));
         }
     }
 }
