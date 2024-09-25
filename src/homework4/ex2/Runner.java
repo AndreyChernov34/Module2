@@ -18,16 +18,16 @@ public class Runner {
 
         HashSet<String> words = new HashSet<>(List.of("тон", "тополь", "боль", "рой", "стройка"));
 
-        Optional<Integer> result = words.stream().map(e -> countchar(e)).reduce((a, b) -> a + b);
+        Optional<Integer> result = words.stream().map(e -> countChar(e)).reduce((a, b) -> a + b);
         System.out.println(result.orElse(0));
     }
 
-    //функция подсчета вхождения символа в строку
-    public static Integer countchar(String word) {
+    //функция подсчета вхождения символа в слово
+    public static Integer countChar(String word) {
         int count = 0;
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == CHARACTER) {
-                count = count + 1;
+                count += 1;
             }
         }
         return count;

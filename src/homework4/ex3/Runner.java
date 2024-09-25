@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class Runner {
-    @SuppressWarnings("checkstyle:SeparatorWrap")
     public static void main(String[] args) {
         //Задание №3 - Небоскребы, небоскребы, а я...
         //1. Создать Класс Небоскреб - имя небоскреба, его высота в метрах.
@@ -48,20 +47,14 @@ public class Runner {
         System.out.println("Самый высокий: " + (maxheigth.isEmpty() ? "небоскребов нет" : maxheigth.get()));
         System.out.println("___________________________");
 
-        // выбираем выше километра с выводом string name
-        Optional<String> upKilometr = resultlist.stream().
-                filter(e -> e.getHeigth() > 1000).
-                map(e -> e.getName()).
-                reduce((a, b) -> "%s, %s".formatted(a, b));
-        System.out.println("Небоскребы выше 1км: " + upKilometr.orElse("небоскреба выше километра - нет"));
-
-        // выбираем выше километра с выводом Skyscreaoer
-        System.out.print("Небоскребы выше 1км: ");
+        // выбираем выше километра с выводом экземпляра класса Skyscreaper
         List<Skyscraper> upKilometr2 = resultlist.stream().filter(e -> e.getHeigth() > 1000).toList();
         if (upKilometr2.isEmpty()) {
             System.out.println("небоскреба выше километра - нет");
         } else {
+            System.out.print("Небоскребы выше 1км: ");
             upKilometr2.forEach(e -> System.out.println(e));
         }
+
     }
 }
