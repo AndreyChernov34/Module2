@@ -36,7 +36,7 @@ public class Runner {
         // фильтруем по номеру, получаем номера и выводим на печать
         allcars.stream()
                 .filter(e -> e.getNumber().substring(1, 3).equals("04"))
-                .map(e -> e.getNumber())
-                .forEach(e -> System.out.println(e));
+                .map(Car::getNumber)
+                .forEach(System.out::println);
     }
 }

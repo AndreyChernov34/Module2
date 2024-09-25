@@ -39,7 +39,7 @@ public class Runner {
         //убираем дубликаты
         List<Skyscraper> resultlist = listSkyscreaper.stream().distinct().toList();
         //вывод на печать 3 первых
-        resultlist.stream().limit(3).forEach(e -> System.out.println(e));
+        resultlist.stream().limit(3).forEach(System.out::println);
         System.out.println("___________________________");
 
         // выбираем самый высокий
@@ -53,7 +53,7 @@ public class Runner {
             System.out.println("небоскреба выше километра - нет");
         } else {
             System.out.print("Небоскребы выше 1км: ");
-            upKilometr2.forEach(e -> System.out.println(e));
+            upKilometr2.forEach(System.out::println);
         }
 
     }
