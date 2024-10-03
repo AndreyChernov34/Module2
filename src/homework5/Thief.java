@@ -15,7 +15,8 @@ public class Thief {
         this.money = BigDecimal.ZERO;
     }
 
-    private void stealMoney(Bank bank) throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    private void stealMoney(Bank bank) throws NoSuchFieldException, IllegalAccessException,
+            NoSuchMethodException, InvocationTargetException {
         Class<Bank> bankClass = Bank.class;
         Field moneyBank = bankClass.getDeclaredField("money");
         moneyBank.setAccessible(true);
